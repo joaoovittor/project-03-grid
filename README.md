@@ -1,18 +1,18 @@
-##project-03-grid  
+## project-03-grid  
 A front-end study project focused on modern layouts and responsiveness using CSS Grid.
 
-##IsFitness
+## IsFitness
 - IsFitness is a fictional fitness academy website created to practice advanced Grid layouts, visual hierarchy, and structured sections for a modern gym interface.
 - The project simulates a professional gym website, highlighting training programs, motivation, and a strong visual identity focused on performance and discipline.
 
-##Technologies
+## Technologies
 - HTML  
 - CSS (Grid)
 
-##About
+## About
 - This project was built for learning and practice purposes, focusing on complex grid structures, responsive layouts, and precise positioning using CSS Grid in a real-world inspired scenario.
 
-##Credits
+## Credits
 Design inspirations and images were sourced from Pinterest and are used for study purposes only:
 
 - https://br.pinterest.com/pin/31736372372295187  
@@ -28,8 +28,8 @@ Icons:
 - Instagram and Facebook icons fromhttps://www.flaticon.com/
 - Other Icons https://fonts.google.com/
 
-##Author  
+## Author  
 - Developed by João Vitor
 
-##License  
+## License  
 MIT License © 2025 João Vitor
