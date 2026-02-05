@@ -1,0 +1,140 @@
+/*Global*/
+body {
+  margin: 0;
+  padding: 0;
+}
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+ul,
+li,
+blockquote {
+  padding: 0px;
+  margin: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}
+button {
+  background: 0;
+  border: 0;
+  padding: 0;
+}
+
+/*Color*/
+:root {
+  --co-0: #ffffff;
+  --co-1: #a6a6a6;
+  --co-2: #ff3131;
+  --co-3: #ff9d9d;
+  --co-4: #c5e5ff;
+  --co-5: #46a5f1;
+  --co-6: #ff751f;
+  --co-7: #000000;
+}
+
+.co-0 {
+  color: var(--co-0);
+}
+.co-1 {
+  color: var(--co-1);
+}
+.co-2 {
+  color: var(--co-2);
+}
+.co-3 {
+  color: var(--co-3);
+}
+.co-4 {
+  color: var(--co-4);
+}
+.co-5 {
+  color: var(--co-5);
+}
+.co-6 {
+  color: var(--co-6);
+}
+.co-7 {
+  color: var(--co-7);
+}
+
+/*Typography*/
+.font-1-s {
+  font:
+    300 2.825rem/1 "Bree Serif",
+    serif;
+}
+.font-1-xs {
+  font:
+    300 1.025rem/1 "Inter",
+    sans-serif;
+}
+.font-2-xs {
+  font:
+    700 1.025rem/1 "Inter",
+    sans-serif;
+}
+
+/*Container*/
+.container {
+  display: grid;
+  grid-template-columns: minmax(190px, 1fr) 4fr 1fr;
+  grid-template-areas:
+    "Header Header Header"
+    "Plans Content Ad"
+    "Footer Footer Footer";
+}
+
+/*Header*/
+.header {
+  grid-area: Header;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  align-items: center;
+  padding: 30px 60px;
+  background-color: var(--co-7);
+}
+.header button {
+  justify-self: end;
+}
+.header button a {
+  padding: 15px 30px;
+  background: var(--co-6);
+  border-radius: 2px;
+}
+.header-nav {
+  display: grid;
+  grid-template-columns: repeat(4, max-content);
+  gap: 20px;
+}
+@media (max-width: 745px) {
+  .header {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 30px;
+  }
+  .header button {
+    justify-self: center;
+  }
+}
+@media (max-width: 453px) {
+  .header-nav {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    justify-items: center;
+  }
+}
