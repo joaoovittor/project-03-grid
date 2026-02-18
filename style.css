@@ -104,6 +104,71 @@ button {
 .font-5-xs {
   font-weight: 700;
 }
+.font-1-ab {
+  font:
+    600 1.025rem/1 "Inter",
+    sans-serif;
+  text-transform: uppercase;
+}
+.font-2-ab {
+  font:
+    700 clamp(2.2rem, 4vw, 3.5rem)/1.25 "Inter",
+    sans-serif;
+  white-space: nowrap;
+}
+.font-3-ab {
+  font:
+    100 1.1rem/1.25 "Inter",
+    sans-serif;
+  letter-spacing: 1.215px;
+}
+.font-4-ab {
+  font:
+    100 1.25rem/1.6 "Inter",
+    sans-serif;
+  letter-spacing: 1.215px;
+}
+.font-5-ab {
+  font:
+    700 0.9rem/1.3 "Inter",
+    sans-serif;
+}
+.font-6-ab {
+  font:
+    100 1.15rem/1.3 "Inter",
+    sans-serif;
+  letter-spacing: 1.215px;
+}
+.font-7-ab {
+  font:
+    700 2.5rem/1.1 "Inter",
+    sans-serif;
+}
+.font-8-ab {
+  font:
+    700 clamp(0.7rem, 4.8vw, 1.9rem)/1.1 "Inter",
+    sans-serif;
+  letter-spacing: 1px;
+}
+.font-9-ab {
+  font:
+    700 1.1rem/1.1 "Inter",
+    sans-serif;
+  letter-spacing: 1px;
+}
+@media (max-width: 700px) {
+  .font-7-ab {
+    font:
+      700 clamp(1.6rem, 6vw, 2.5rem) "Inter",
+      sans-serif;
+  }
+  @media (max-width: 394px) {
+    .font-2-ab {
+      font-size: clamp(1.1rem, 8vw, 2.2rem);
+    }
+  }
+}
+
 /*Container*/
 .container {
   display: grid;
@@ -118,12 +183,22 @@ button {
   background-size: cover;
   height: auto;
 }
+@media (max-width: 1400px) {
+  .container {
+    grid-template-areas:
+      "Header Header Header"
+      "Plans Content Content"
+      "Ad Ad Ad"
+      "Footer Footer Footer";
+  }
+}
 @media (max-width: 1105px) {
   .container {
     grid-template-areas:
       "Header Header Header"
       "Plans Plans  Plans"
-      "Content Content Ad"
+      "Content Content Content"
+      "Ad Ad Ad"
       "Footer Footer Footer";
   }
 }
@@ -226,4 +301,130 @@ button {
   .plans li {
     min-width: 132px;
   }
+}
+
+/*Content*/
+.content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-area: Content;
+  background: #0b0b0b;
+  gap: 50px;
+  padding: 100px 50px;
+}
+.content-item1 h2 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+.content-item1 h1 {
+  margin-bottom: 20px;
+}
+.content p:nth-of-type(1) {
+  grid-column: span 2;
+}
+.content-item2-extra {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(120px, max-content));
+  justify-content: start;
+  gap: 25px;
+  margin-bottom: 35px;
+}
+.content-item2-extra span {
+  display: block;
+  text-align: center;
+  background-color: var(--co-6);
+  padding: 25px 5px;
+  border-radius: 4px;
+}
+.content-item2 {
+  align-self: flex-end;
+}
+.content-item2 p {
+  margin-bottom: 25px;
+}
+.content img:nth-last-of-type(1) {
+  max-height: 800px;
+  align-self: flex-end;
+  justify-self: right;
+}
+.content-item3 {
+  margin-top: 100px;
+  grid-column: span 2;
+  text-align: center;
+}
+.content-item3 span {
+  position: relative;
+}
+.content-item3 span::before {
+  content: "";
+  position: absolute;
+  background-color: var(--co-0);
+  height: 1px;
+  width: 300px;
+  top: 100px;
+  left: 90px;
+}
+.content-equipament {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  grid-column: span 2;
+}
+.content-item4 {
+  text-align: center;
+  background-color: var(--co-6);
+  border-radius: 4px;
+  padding: 10px;
+  grid-column: span 2;
+}
+.content-item4 p {
+  margin-bottom: 10px;
+}
+.content-item4 a {
+  background-color: var(--co-7);
+  padding: 10px 20px;
+  border-radius: 2px;
+}
+@media (max-width: 700px) {
+  .content {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .content p:nth-of-type(1),
+  .content-item3,
+  .content-equipament,
+  .content-item4 {
+    grid-column: 1;
+  }
+  .content-item2-extra {
+    justify-content: center;
+  }
+  .content img:nth-last-of-type(1) {
+    justify-self: center;
+  }
+}
+@media (max-width: 700px) {
+  .content-item3 span::before {
+    display: none;
+  }
+}
+@media (max-width: 406px) {
+  .content-equipament {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .content-equipament li:nth-child(3) {
+    justify-self: center;
+    grid-column: span 2;
+  }
+  @media (max-width: 372px) {
+    .content-item2-extra {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+/*Aside*/
+.aside {
+  grid-area: Ad;
 }
