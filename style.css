@@ -188,7 +188,6 @@ button {
     grid-template-areas:
       "Header Header Header"
       "Plans Content Content"
-      "Ad Ad Ad"
       "Footer Footer Footer";
   }
 }
@@ -426,5 +425,12 @@ button {
 }
 /*Aside*/
 .aside {
+  display: grid;
+  justify-content: center;
   grid-area: Ad;
+}
+@media (max-width: 1400px) {
+  .aside {
+    display: none;
+  }
 }
