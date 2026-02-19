@@ -156,6 +156,22 @@ button {
     sans-serif;
   letter-spacing: 1px;
 }
+.font-10-ab {
+  font:
+    400 1.1rem/1.3 "Inter",
+    sans-serif;
+}
+.font-11-ab {
+  font:
+    400 1.05rem/1.3 "Inter",
+    sans-serif;
+}
+.font-12-ab {
+  font:
+    100 0.8rem/1.3 "Inter",
+    sans-serif;
+  letter-spacing: 1.5px;
+}
 @media (max-width: 700px) {
   .font-7-ab {
     font:
@@ -197,7 +213,6 @@ button {
       "Header Header Header"
       "Plans Plans  Plans"
       "Content Content Content"
-      "Ad Ad Ad"
       "Footer Footer Footer";
   }
 }
@@ -423,14 +438,94 @@ button {
     }
   }
 }
+
 /*Aside*/
 .aside {
   display: grid;
   justify-content: center;
   grid-area: Ad;
+  padding: 5px;
 }
 @media (max-width: 1400px) {
   .aside {
     display: none;
+  }
+}
+
+/*Footer*/
+.footer {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr);
+  padding: 100px 50px 50px 50px;
+  gap: 50px;
+  grid-area: Footer;
+  background: url(./img/background/footer.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: auto;
+}
+.footer a {
+  color: var(--co-1);
+}
+.footer-item2,
+.footer-item3,
+.footer-item4 {
+  color: var(--co-0);
+}
+.footer-item1 h1 {
+  margin-bottom: 25px;
+}
+.footer-item1 p {
+  margin-bottom: 25px;
+}
+.footer-item1-extra {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  justify-content: start;
+  gap: 15px;
+}
+.footer-item2 ul li,
+.footer-item3 ul li,
+.footer-item4 ul li {
+  margin-top: 15px;
+}
+.footer-extra h4 {
+  margin-bottom: 15px;
+}
+.footer-extra {
+  margin-top: 100px;
+}
+@media (max-width: 800px) {
+  .footer {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .footer-item1 {
+    text-align: center;
+    grid-column: 1 / -1;
+  }
+  .footer-item1 h1 {
+    margin-bottom: 15px;
+  }
+  .footer-item1 p {
+    margin-bottom: 15px;
+  }
+  .footer-item1-extra {
+    justify-self: center;
+  }
+  .footer-extra {
+    margin-top: 50px;
+  }
+}
+@media (max-width: 500px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+  .footer-item1,
+  .footer-item2,
+  .footer-item3 {
+    margin-bottom: 15px;
   }
 }
