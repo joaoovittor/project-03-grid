@@ -29,6 +29,7 @@ a {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
   border-radius: 5px;
 }
 button {
@@ -188,7 +189,7 @@ button {
 /*Container*/
 .container {
   display: grid;
-  grid-template-columns: minmax(190px, 1fr) 5fr 1fr;
+  grid-template-columns: minmax(190px, 1.3fr) 5fr 1fr;
   grid-template-areas:
     "Header Header Header"
     "Plans Content Ad"
@@ -207,7 +208,7 @@ button {
       "Footer Footer Footer";
   }
 }
-@media (max-width: 1105px) {
+@media (max-width: 1157px) {
   .container {
     grid-template-areas:
       "Header Header Header"
@@ -226,16 +227,16 @@ button {
   padding: 30px 60px;
   background-color: var(--co-7);
 }
-.header button {
+.btn {
   justify-self: end;
 }
-.header button a {
+.btn {
   padding: 15px 30px;
   background: var(--co-6);
   border-radius: 2px;
   transition: 0.2s ease-in;
 }
-.header button a:hover {
+.btn:hover {
   background: #af5116;
 }
 .header-nav {
@@ -252,7 +253,7 @@ button {
     justify-items: center;
     gap: 30px;
   }
-  .header button {
+  .btn {
     justify-self: center;
   }
 }
@@ -305,7 +306,7 @@ button {
   content: "→";
   transform: translateX(5px);
 }
-@media (max-width: 1105px) {
+@media (max-width: 1157px) {
   .plans-container {
     grid-template-columns: repeat(5, auto);
   }
@@ -378,7 +379,7 @@ button {
   top: 100px;
   left: 90px;
 }
-.content-equipament {
+.content-equipment {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
@@ -386,6 +387,7 @@ button {
 }
 .content-item4 {
   text-align: center;
+  justify-items: center;
   background-color: var(--co-6);
   border-radius: 4px;
   padding: 10px;
@@ -406,7 +408,7 @@ button {
   }
   .content p:nth-of-type(1),
   .content-item3,
-  .content-equipament,
+  .content-equipment,
   .content-item4 {
     grid-column: 1;
   }
@@ -423,12 +425,12 @@ button {
   }
 }
 @media (max-width: 406px) {
-  .content-equipament {
+  .content-equipment {
     display: grid;
     grid-template-columns: auto auto;
     gap: 30px;
   }
-  .content-equipament li:nth-child(3) {
+  .content-equipment li:nth-child(3) {
     justify-self: center;
     grid-column: span 2;
   }
